@@ -1,0 +1,1079 @@
+[
+  {
+    "model": "businesses.businesscategory",
+    "pk": 1,
+    "fields": {
+      "name": "Comida Nicaraguense"
+    }
+  },
+  {
+    "model": "businesses.businesscategory",
+    "pk": 2,
+    "fields": {
+      "name": "Mariscos y Parrilla"
+    }
+  },
+  {
+    "model": "businesses.businesscategory",
+    "pk": 3,
+    "fields": {
+      "name": "Cafe y Postres"
+    }
+  },
+  {
+    "model": "businesses.businesscategory",
+    "pk": 4,
+    "fields": {
+      "name": "Cocina Caribe"
+    }
+  },
+  {
+    "model": "businesses.business",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Casa Maiz",
+      "tagline": "Sabores de finca a tu mesa.",
+      "description": "Cocina tradicional nicaraguense con ingredientes frescos de productores locales.",
+      "address": "Calle Principal Km 8, Managua",
+      "latitude": "12.136389",
+      "longitude": "-86.251389",
+      "image_url": "https://images.unsplash.com/photo-1604908177093-3faea7f0d11b?auto=format&fit=crop&w=900&q=80",
+      "hero_image_url": "https://images.unsplash.com/photo-1604908177522-40275b121977?auto=format&fit=crop&w=1400&q=80",
+      "average_rating": "4.7",
+      "review_count": 128,
+      "delivery_available": true,
+      "delivery_time_minutes_min": 25,
+      "delivery_time_minutes_max": 40,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "businesses.business",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "name": "Puerto Azul Grill",
+      "tagline": "Parrilladas y mariscos frente al lago.",
+      "description": "Especialidades de mar y cortes a la parrilla inspirados en la costa pacifica de Nicaragua.",
+      "address": "Malecón de Granada, Nicaragua",
+      "latitude": "11.928889",
+      "longitude": "-85.955833",
+      "image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "hero_image_url": "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1400&q=80",
+      "average_rating": "4.5",
+      "review_count": 86,
+      "delivery_available": true,
+      "delivery_time_minutes_min": 30,
+      "delivery_time_minutes_max": 50,
+      "created_at": "2025-01-02T00:00:00Z"
+    }
+  },
+  {
+    "model": "businesses.business",
+    "pk": 3,
+    "fields": {
+      "category": 3,
+      "name": "Cafe Flor de Cacao",
+      "tagline": "Aromas de altura en cada taza.",
+      "description": "Cafe de especialidad y reposteria artesanal inspirada en las fincas de Matagalpa.",
+      "address": "Avenida Bartolome, Matagalpa",
+      "latitude": "12.925278",
+      "longitude": "-85.917500",
+      "image_url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80",
+      "hero_image_url": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1400&q=80",
+      "average_rating": "4.8",
+      "review_count": 212,
+      "delivery_available": true,
+      "delivery_time_minutes_min": 15,
+      "delivery_time_minutes_max": 25,
+      "created_at": "2025-01-05T00:00:00Z"
+    }
+  },
+  {
+    "model": "businesses.business",
+    "pk": 4,
+    "fields": {
+      "category": 4,
+      "name": "Sabor Caribeño",
+      "tagline": "Sabores del Atlantico Sur.",
+      "description": "Platos tipicos costeños con coco, mariscos frescos y especias caribenias.",
+      "address": "Costado sur del parque central, Bluefields",
+      "latitude": "11.996389",
+      "longitude": "-83.764167",
+      "image_url": "https://images.unsplash.com/photo-1543353071-10c8ba85a904?auto=format&fit=crop&w=900&q=80",
+      "hero_image_url": "https://images.unsplash.com/photo-1540604760942-025000d1ab43?auto=format&fit=crop&w=1400&q=80",
+      "average_rating": "4.6",
+      "review_count": 94,
+      "delivery_available": true,
+      "delivery_time_minutes_min": 35,
+      "delivery_time_minutes_max": 55,
+      "created_at": "2025-01-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "businesses.business",
+    "pk": 5,
+    "fields": {
+      "category": 2,
+      "name": "La Parrillita Colonial",
+      "tagline": "Carnes al fuego con historia.",
+      "description": "Cortes seleccionados, embutidos artesanales y guarniciones coloniales en el corazon de Leon.",
+      "address": "Calle Real, Leon",
+      "latitude": "12.437500",
+      "longitude": "-86.879167",
+      "image_url": "https://images.unsplash.com/photo-1604908177522-40275b121977?auto=format&fit=crop&w=900&q=80",
+      "hero_image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80",
+      "average_rating": "4.4",
+      "review_count": 73,
+      "delivery_available": true,
+      "delivery_time_minutes_min": 28,
+      "delivery_time_minutes_max": 45,
+      "created_at": "2025-01-07T00:00:00Z"
+    }
+  },
+  {
+    "model": "businesses.businesshours",
+    "pk": 1,
+    "fields": {
+      "business": 1,
+      "day_of_week": 0,
+      "open_time": "09:00:00",
+      "close_time": "21:00:00"
+    }
+  },
+  {
+    "model": "businesses.businesshours",
+    "pk": 2,
+    "fields": {
+      "business": 1,
+      "day_of_week": 6,
+      "open_time": "08:00:00",
+      "close_time": "22:00:00"
+    }
+  },
+  {
+    "model": "businesses.businesshours",
+    "pk": 3,
+    "fields": {
+      "business": 2,
+      "day_of_week": 4,
+      "open_time": "11:00:00",
+      "close_time": "23:00:00"
+    }
+  },
+  {
+    "model": "businesses.businesshours",
+    "pk": 4,
+    "fields": {
+      "business": 3,
+      "day_of_week": 1,
+      "open_time": "07:00:00",
+      "close_time": "20:00:00"
+    }
+  },
+  {
+    "model": "businesses.businesshours",
+    "pk": 5,
+    "fields": {
+      "business": 4,
+      "day_of_week": 5,
+      "open_time": "10:00:00",
+      "close_time": "22:30:00"
+    }
+  },
+  {
+    "model": "businesses.businesshours",
+    "pk": 6,
+    "fields": {
+      "business": 5,
+      "day_of_week": 5,
+      "open_time": "12:00:00",
+      "close_time": "23:30:00"
+    }
+  },
+  {
+    "model": "menu.menusection",
+    "pk": 1,
+    "fields": {
+      "business": 1,
+      "name": "Entradas de la Casa",
+      "description": "Para compartir mientras llega el plato fuerte.",
+      "position": 1
+    }
+  },
+  {
+    "model": "menu.menusection",
+    "pk": 2,
+    "fields": {
+      "business": 1,
+      "name": "Platos Fuertes",
+      "description": "Recetas familiares con el toque de Casa Maiz.",
+      "position": 2
+    }
+  },
+  {
+    "model": "menu.menusection",
+    "pk": 3,
+    "fields": {
+      "business": 2,
+      "name": "Del Mar",
+      "description": "Pescados y mariscos a la parrilla.",
+      "position": 1
+    }
+  },
+  {
+    "model": "menu.menusection",
+    "pk": 4,
+    "fields": {
+      "business": 2,
+      "name": "Parrilladas",
+      "description": "Cortes seleccionados con guarniciones tipicas.",
+      "position": 2
+    }
+  },
+  {
+    "model": "menu.menusection",
+    "pk": 5,
+    "fields": {
+      "business": 3,
+      "name": "Bebidas de Autor",
+      "description": "Cafe de especialidad y bebidas frias.",
+      "position": 1
+    }
+  },
+  {
+    "model": "menu.menusection",
+    "pk": 6,
+    "fields": {
+      "business": 3,
+      "name": "Postres Artesanales",
+      "description": "Reposteria fresca hecha cada dia.",
+      "position": 2
+    }
+  },
+  {
+    "model": "menu.menusection",
+    "pk": 7,
+    "fields": {
+      "business": 4,
+      "name": "Especialidades Caribe\u00F1as",
+      "description": "Sabores con coco, chile cabro y hierbas frescas.",
+      "position": 1
+    }
+  },
+  {
+    "model": "menu.menusection",
+    "pk": 8,
+    "fields": {
+      "business": 4,
+      "name": "Sopas y Caldos",
+      "description": "Recetas reconfortantes para dias lluviosos.",
+      "position": 2
+    }
+  },
+  {
+    "model": "menu.menusection",
+    "pk": 9,
+    "fields": {
+      "business": 5,
+      "name": "Parrilladas Familiares",
+      "description": "Carnes ahumadas y embutidos artesanales.",
+      "position": 1
+    }
+  },
+  {
+    "model": "menu.menusection",
+    "pk": 10,
+    "fields": {
+      "business": 5,
+      "name": "Antojitos Coloniales",
+      "description": "Bocados para compartir con la familia.",
+      "position": 2
+    }
+  },
+  {
+    "model": "menu.fooditem",
+    "pk": 1,
+    "fields": {
+      "business": 1,
+      "section": 1,
+      "name": "Tamalitos de Elote",
+      "description": "Suaves tamales de elote dulce servidos con crema agria y cuajada.",
+      "image_url": "https://images.unsplash.com/photo-1608037681933-6783d902f028?auto=format&fit=crop&w=800&q=80",
+      "price": "140.00",
+      "currency": "NIO",
+      "preparation_time_minutes": 15,
+      "is_available": true,
+      "is_discounted": true,
+      "discount_percentage": "15.00",
+      "original_price": "165.00",
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.fooditem",
+    "pk": 2,
+    "fields": {
+      "business": 1,
+      "section": 2,
+      "name": "Indio Viejo",
+      "description": "Guiso de res con masa de maiz, tomate y naranja agria, acompanado de arroz blanco.",
+      "image_url": "https://images.unsplash.com/photo-1607329129896-5ce0718c52c4?auto=format&fit=crop&w=800&q=80",
+      "price": "210.00",
+      "currency": "NIO",
+      "preparation_time_minutes": 25,
+      "is_available": true,
+      "is_discounted": false,
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.fooditem",
+    "pk": 3,
+    "fields": {
+      "business": 2,
+      "section": 3,
+      "name": "Ceviche de Pargo",
+      "description": "Pargo fresco curado en limon con toques de chile cabro y culantro.",
+      "image_url": "https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=800&q=80",
+      "price": "260.00",
+      "currency": "NIO",
+      "preparation_time_minutes": 18,
+      "is_available": true,
+      "is_discounted": true,
+      "discount_percentage": "10.00",
+      "original_price": "290.00",
+      "created_at": "2025-01-02T00:00:00Z",
+      "updated_at": "2025-01-02T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.fooditem",
+    "pk": 4,
+    "fields": {
+      "business": 2,
+      "section": 4,
+      "name": "Churrasco de Res",
+      "description": "Corte premium sellado a la parrilla, servido con chimichurri y tostones.",
+      "image_url": "https://images.unsplash.com/photo-1555992336-cbf3d3ff87cc?auto=format&fit=crop&w=800&q=80",
+      "price": "320.00",
+      "currency": "NIO",
+      "preparation_time_minutes": 30,
+      "is_available": true,
+      "created_at": "2025-01-02T00:00:00Z",
+      "updated_at": "2025-01-02T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.fooditem",
+    "pk": 5,
+    "fields": {
+      "business": 3,
+      "section": 5,
+      "name": "Latte Flor de Cacao",
+      "description": "Cafe espresso, cacao artesanal y espuma de leche de finca.",
+      "image_url": "https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=800&q=80",
+      "price": "95.00",
+      "currency": "NIO",
+      "preparation_time_minutes": 8,
+      "is_available": true,
+      "is_discounted": false,
+      "created_at": "2025-01-05T00:00:00Z",
+      "updated_at": "2025-01-05T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.fooditem",
+    "pk": 6,
+    "fields": {
+      "business": 3,
+      "section": 6,
+      "name": "Tres Leches con Flor de Jamaica",
+      "description": "Bizcocho suave ba\u00F1ado en mezcla de leches con glaseado de flor de jamaica.",
+      "image_url": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80",
+      "price": "135.00",
+      "currency": "NIO",
+      "preparation_time_minutes": 10,
+      "is_available": true,
+      "is_discounted": true,
+      "discount_percentage": "12.00",
+      "original_price": "155.00",
+      "created_at": "2025-01-05T00:00:00Z",
+      "updated_at": "2025-01-05T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.fooditem",
+    "pk": 7,
+    "fields": {
+      "business": 4,
+      "section": 7,
+      "name": "Rond\u00F3n Caribe\u00F1o",
+      "description": "Cazuela de mariscos, yuca y platano en leche de coco y especias.",
+      "image_url": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80",
+      "price": "340.00",
+      "currency": "NIO",
+      "preparation_time_minutes": 35,
+      "is_available": true,
+      "is_discounted": false,
+      "created_at": "2025-01-06T00:00:00Z",
+      "updated_at": "2025-01-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.fooditem",
+    "pk": 8,
+    "fields": {
+      "business": 4,
+      "section": 8,
+      "name": "Sopa de Alb\u00F3ndigas de Pescado",
+      "description": "Caldo ligero con alb\u00F3ndigas de pescado, coco y culantro.",
+      "image_url": "https://images.unsplash.com/photo-1514516430032-7f40ed986c5c?auto=format&fit=crop&w=800&q=80",
+      "price": "185.00",
+      "currency": "NIO",
+      "preparation_time_minutes": 22,
+      "is_available": true,
+      "is_discounted": true,
+      "discount_percentage": "10.00",
+      "original_price": "205.00",
+      "created_at": "2025-01-06T00:00:00Z",
+      "updated_at": "2025-01-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.fooditem",
+    "pk": 9,
+    "fields": {
+      "business": 5,
+      "section": 9,
+      "name": "Parrillada Colonial",
+      "description": "Selecci\u00F3n de chorizo artesanal, costilla y lomito con salsas caseras.",
+      "image_url": "https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=800&q=80",
+      "price": "390.00",
+      "currency": "NIO",
+      "preparation_time_minutes": 32,
+      "is_available": true,
+      "is_discounted": false,
+      "created_at": "2025-01-07T00:00:00Z",
+      "updated_at": "2025-01-07T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.fooditem",
+    "pk": 10,
+    "fields": {
+      "business": 5,
+      "section": 10,
+      "name": "Nacatamal Mini",
+      "description": "Version personal de nuestro nacatamal con cerdo, arroz y aceitunas.",
+      "image_url": "https://images.unsplash.com/photo-1505935428862-770b6f24f629?auto=format&fit=crop&w=800&q=80",
+      "price": "110.00",
+      "currency": "NIO",
+      "preparation_time_minutes": 20,
+      "is_available": true,
+      "is_discounted": true,
+      "discount_percentage": "8.00",
+      "original_price": "120.00",
+      "created_at": "2025-01-07T00:00:00Z",
+      "updated_at": "2025-01-07T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.extragroup",
+    "pk": 1,
+    "fields": {
+      "business": 1,
+      "name": "Salsas Artesanales",
+      "description": "Elige tus salsas favoritas recien hechas."
+    }
+  },
+  {
+    "model": "menu.extragroup",
+    "pk": 2,
+    "fields": {
+      "business": 1,
+      "name": "Guarniciones Tipicas",
+      "description": "Acompana tus platos fuertes."
+    }
+  },
+  {
+    "model": "menu.extragroup",
+    "pk": 3,
+    "fields": {
+      "business": 2,
+      "name": "Aderezos Frescos",
+      "description": "Salsas y aderezos para tus mariscos."
+    }
+  },
+  {
+    "model": "menu.extragroup",
+    "pk": 4,
+    "fields": {
+      "business": 2,
+      "name": "Acompanamientos de Parrilla",
+      "description": "Selecciona tus guarniciones favoritas."
+    }
+  },
+  {
+    "model": "menu.extragroup",
+    "pk": 5,
+    "fields": {
+      "business": 3,
+      "name": "Jarabes Artesanales",
+      "description": "Endulzantes hechos en casa para tus bebidas."
+    }
+  },
+  {
+    "model": "menu.extragroup",
+    "pk": 6,
+    "fields": {
+      "business": 3,
+      "name": "Complementos Dulces",
+      "description": "Agrega toppings a tus postres."
+    }
+  },
+  {
+    "model": "menu.extragroup",
+    "pk": 7,
+    "fields": {
+      "business": 4,
+      "name": "Tostones y Salsas",
+      "description": "Acompana tus platos con tostones recien hechos."
+    }
+  },
+  {
+    "model": "menu.extragroup",
+    "pk": 8,
+    "fields": {
+      "business": 4,
+      "name": "Picadillos Caribe\u00F1os",
+      "description": "Complementos de coco y mariscos."
+    }
+  },
+  {
+    "model": "menu.extragroup",
+    "pk": 9,
+    "fields": {
+      "business": 5,
+      "name": "Salsas Coloniales",
+      "description": "Salsas ahumadas y criollas."
+    }
+  },
+  {
+    "model": "menu.extragroup",
+    "pk": 10,
+    "fields": {
+      "business": 5,
+      "name": "Guarniciones Coloniales",
+      "description": "Yuca, elote y ensaladas frescas."
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 1,
+    "fields": {
+      "group": 1,
+      "name": "Salsa criolla",
+      "price_delta": "0.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 2,
+    "fields": {
+      "group": 1,
+      "name": "Salsa de chile cabro",
+      "price_delta": "10.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 3,
+    "fields": {
+      "group": 2,
+      "name": "Gallo pinto",
+      "price_delta": "25.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 4,
+    "fields": {
+      "group": 2,
+      "name": "Tajadas verdes",
+      "price_delta": "20.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 5,
+    "fields": {
+      "group": 3,
+      "name": "Aderezo de mango",
+      "price_delta": "0.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 6,
+    "fields": {
+      "group": 3,
+      "name": "Salsa de maracuya picante",
+      "price_delta": "15.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 7,
+    "fields": {
+      "group": 4,
+      "name": "Yuca al mojo",
+      "price_delta": "35.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 8,
+    "fields": {
+      "group": 4,
+      "name": "Ensalada verde",
+      "price_delta": "25.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 9,
+    "fields": {
+      "group": 5,
+      "name": "Jarabe de canela",
+      "price_delta": "8.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 10,
+    "fields": {
+      "group": 5,
+      "name": "Miel de cacao",
+      "price_delta": "12.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 11,
+    "fields": {
+      "group": 6,
+      "name": "Crocante de cacao",
+      "price_delta": "15.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 12,
+    "fields": {
+      "group": 6,
+      "name": "Frutas tropicales",
+      "price_delta": "18.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 13,
+    "fields": {
+      "group": 7,
+      "name": "Tostones crujientes",
+      "price_delta": "22.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 14,
+    "fields": {
+      "group": 7,
+      "name": "Salsa de coco con chile",
+      "price_delta": "18.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 15,
+    "fields": {
+      "group": 8,
+      "name": "Escabeche de camaron",
+      "price_delta": "28.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 16,
+    "fields": {
+      "group": 8,
+      "name": "Ensalada de coco y pi\u00F1a",
+      "price_delta": "24.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 17,
+    "fields": {
+      "group": 9,
+      "name": "Chimichurri colonial",
+      "price_delta": "10.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 18,
+    "fields": {
+      "group": 9,
+      "name": "Salsa de nance",
+      "price_delta": "14.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 19,
+    "fields": {
+      "group": 10,
+      "name": "Elote asado",
+      "price_delta": "30.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.extraitem",
+    "pk": 20,
+    "fields": {
+      "group": 10,
+      "name": "Ensalada de repollo criolla",
+      "price_delta": "18.00",
+      "is_available": true
+    }
+  },
+  {
+    "model": "menu.fooditemextragroup",
+    "pk": 1,
+    "fields": {
+      "food_item": 1,
+      "group": 1,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.fooditemextragroup",
+    "pk": 2,
+    "fields": {
+      "food_item": 2,
+      "group": 2,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 1
+    }
+  },
+  {
+    "model": "menu.fooditemextragroup",
+    "pk": 3,
+    "fields": {
+      "food_item": 3,
+      "group": 3,
+      "required": true,
+      "min_choices": 1,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.fooditemextragroup",
+    "pk": 4,
+    "fields": {
+      "food_item": 4,
+      "group": 4,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.fooditemextragroup",
+    "pk": 5,
+    "fields": {
+      "food_item": 5,
+      "group": 5,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.fooditemextragroup",
+    "pk": 6,
+    "fields": {
+      "food_item": 6,
+      "group": 6,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.fooditemextragroup",
+    "pk": 7,
+    "fields": {
+      "food_item": 7,
+      "group": 7,
+      "required": true,
+      "min_choices": 1,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.fooditemextragroup",
+    "pk": 8,
+    "fields": {
+      "food_item": 8,
+      "group": 8,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.fooditemextragroup",
+    "pk": 9,
+    "fields": {
+      "food_item": 9,
+      "group": 9,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.fooditemextragroup",
+    "pk": 10,
+    "fields": {
+      "food_item": 10,
+      "group": 10,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 1
+    }
+  },
+  {
+    "model": "menu.mysterybox",
+    "pk": 1,
+    "fields": {
+      "business": 1,
+      "title": "Caja Sorpresa Campesina",
+      "description": "Incluye entrada, plato fuerte y postre inspirados en los sabores del interior del pais.",
+      "highlight": "Solo 30 unidades por dia",
+      "image_url": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80",
+      "price": "750.00",
+      "currency": "NIO",
+      "food_item": 2,
+      "is_active": true,
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.mysterybox",
+    "pk": 2,
+    "fields": {
+      "business": 2,
+      "title": "Set Parrillero Azul",
+      "description": "Combo especial con mariscos, carne y acompanamientos premium.",
+      "highlight": "Incluye bebida de cortesia",
+      "image_url": "https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=900&q=80",
+      "price": "980.00",
+      "currency": "NIO",
+      "food_item": 4,
+      "is_active": true,
+      "created_at": "2025-01-02T00:00:00Z",
+      "updated_at": "2025-01-02T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.mysterybox",
+    "pk": 3,
+    "fields": {
+      "business": 3,
+      "title": "Caja Dulce Matagalpina",
+      "description": "Incluye bebida caliente, postre y galletas artesanales.",
+      "highlight": "Solo disponible por las tardes",
+      "image_url": "https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=900&q=80",
+      "price": "420.00",
+      "currency": "NIO",
+      "food_item": 6,
+      "is_active": true,
+      "created_at": "2025-01-05T00:00:00Z",
+      "updated_at": "2025-01-05T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.mysterybox",
+    "pk": 4,
+    "fields": {
+      "business": 4,
+      "title": "Banquete Caribe\u00F1o",
+      "description": "Rond\u00F3n, tostones y postre de coco para dos personas.",
+      "highlight": "Incluye bebida fresca",
+      "image_url": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=900&q=80",
+      "price": "860.00",
+      "currency": "NIO",
+      "food_item": 7,
+      "is_active": true,
+      "created_at": "2025-01-06T00:00:00Z",
+      "updated_at": "2025-01-06T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.mysterybox",
+    "pk": 5,
+    "fields": {
+      "business": 5,
+      "title": "Caja Parrillera Colonial",
+      "description": "Surtido de carnes y embutidos con guarniciones para compartir.",
+      "highlight": "Incluye salsa premium",
+      "image_url": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80",
+      "price": "1020.00",
+      "currency": "NIO",
+      "food_item": 9,
+      "is_active": true,
+      "created_at": "2025-01-07T00:00:00Z",
+      "updated_at": "2025-01-07T00:00:00Z"
+    }
+  },
+  {
+    "model": "menu.mysteryboxextragroup",
+    "pk": 1,
+    "fields": {
+      "mystery_box": 1,
+      "group": 1,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.mysteryboxextragroup",
+    "pk": 2,
+    "fields": {
+      "mystery_box": 1,
+      "group": 2,
+      "required": true,
+      "min_choices": 1,
+      "max_choices": 1
+    }
+  },
+  {
+    "model": "menu.mysteryboxextragroup",
+    "pk": 3,
+    "fields": {
+      "mystery_box": 2,
+      "group": 3,
+      "required": true,
+      "min_choices": 1,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.mysteryboxextragroup",
+    "pk": 4,
+    "fields": {
+      "mystery_box": 2,
+      "group": 4,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.mysteryboxextragroup",
+    "pk": 5,
+    "fields": {
+      "mystery_box": 3,
+      "group": 5,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.mysteryboxextragroup",
+    "pk": 6,
+    "fields": {
+      "mystery_box": 3,
+      "group": 6,
+      "required": true,
+      "min_choices": 1,
+      "max_choices": 1
+    }
+  },
+  {
+    "model": "menu.mysteryboxextragroup",
+    "pk": 7,
+    "fields": {
+      "mystery_box": 4,
+      "group": 7,
+      "required": true,
+      "min_choices": 1,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.mysteryboxextragroup",
+    "pk": 8,
+    "fields": {
+      "mystery_box": 4,
+      "group": 8,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.mysteryboxextragroup",
+    "pk": 9,
+    "fields": {
+      "mystery_box": 5,
+      "group": 9,
+      "required": false,
+      "min_choices": 0,
+      "max_choices": 2
+    }
+  },
+  {
+    "model": "menu.mysteryboxextragroup",
+    "pk": 10,
+    "fields": {
+      "mystery_box": 5,
+      "group": 10,
+      "required": true,
+      "min_choices": 1,
+      "max_choices": 1
+    }
+  }
+]

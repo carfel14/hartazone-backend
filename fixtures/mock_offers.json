@@ -1,0 +1,213 @@
+[
+  {
+    "model": "offers.offerinteresttag",
+    "pk": 1,
+    "fields": {
+      "name": "Todos",
+      "position": 0
+    }
+  },
+  {
+    "model": "offers.offerinteresttag",
+    "pk": 2,
+    "fields": {
+      "name": "Flash",
+      "position": 1
+    }
+  },
+  {
+    "model": "offers.offerinteresttag",
+    "pk": 3,
+    "fields": {
+      "name": "Cena",
+      "position": 2
+    }
+  },
+  {
+    "model": "offers.offerinteresttag",
+    "pk": 4,
+    "fields": {
+      "name": "Brunch",
+      "position": 3
+    }
+  },
+  {
+    "model": "offers.offerinteresttag",
+    "pk": 5,
+    "fields": {
+      "name": "Postres",
+      "position": 4
+    }
+  },
+  {
+    "model": "offers.offer",
+    "pk": 1,
+    "fields": {
+      "title": "Cena para dos con 35% menos",
+      "description": "Incluye entrada, plato fuerte y postre especial del chef.",
+      "image_url": "https://images.unsplash.com/photo-1604909052743-94e838986d87?auto=format&fit=crop&w=1400&q=80",
+      "savings_label": "-35%",
+      "highlight": "Solo hoy hay 50 reservas disponibles",
+      "tag": "",
+      "expires_at": "2025-12-31T23:59:59Z",
+      "category": "hero",
+      "business": 2,
+      "is_active": true,
+      "position": 1,
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "offers.offer",
+    "pk": 2,
+    "fields": {
+      "title": "Noches de sushi con 3x2",
+      "description": "Rollos premium, nigiris seleccionados y sake artesanal.",
+      "image_url": "https://images.unsplash.com/photo-1580828343064-fde4fc206bc6?auto=format&fit=crop&w=1400&q=80",
+      "savings_label": "3x2",
+      "highlight": "Reserva antes de las 6pm",
+      "tag": "",
+      "expires_at": "2025-11-30T21:00:00Z",
+      "category": "hero",
+      "business": 3,
+      "is_active": true,
+      "position": 2,
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "offers.offer",
+    "pk": 3,
+    "fields": {
+      "title": "Brunch ilimitado de domingo",
+      "description": "Platos dulces, salados y barra de mimosas incluida.",
+      "image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1400&q=80",
+      "savings_label": "-28%",
+      "highlight": "Servicio de 9am a 1pm",
+      "tag": "",
+      "expires_at": "2025-10-31T18:00:00Z",
+      "category": "hero",
+      "business": 1,
+      "is_active": true,
+      "position": 3,
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "offers.offer",
+    "pk": 4,
+    "fields": {
+      "title": "Combo tacos y bebida",
+      "description": "Elige cuatro tacos premium y bebida artesanal.",
+      "image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80",
+      "savings_label": "-25%",
+      "highlight": "",
+      "tag": "Flash 2 hrs",
+      "expires_at": "2025-10-20T22:00:00Z",
+      "category": "flash",
+      "business": 1,
+      "is_active": true,
+      "position": 1,
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "offers.offer",
+    "pk": 5,
+    "fields": {
+      "title": "Ramen nocturno",
+      "description": "Incluye topping a elegir y te helado.",
+      "image_url": "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=900&q=80",
+      "savings_label": "-30%",
+      "highlight": "",
+      "tag": "Hasta medianoche",
+      "expires_at": "2025-10-22T23:30:00Z",
+      "category": "flash",
+      "business": 3,
+      "is_active": true,
+      "position": 2,
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "offers.offer",
+    "pk": 6,
+    "fields": {
+      "title": "Buffet vegetariano",
+      "description": "Mesa libre por sesenta minutos con bebidas naturales.",
+      "image_url": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=80",
+      "savings_label": "-20%",
+      "highlight": "Incluye postre saludable",
+      "tag": "Nuevo",
+      "expires_at": "2025-10-31T21:00:00Z",
+      "category": "flash",
+      "business": 4,
+      "is_active": true,
+      "position": 3,
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "offers.offer",
+    "pk": 7,
+    "fields": {
+      "title": "Brunch dominguero",
+      "description": "Mimosas ilimitadas y platillos dulces y salados.",
+      "image_url": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80",
+      "savings_label": "-18%",
+      "highlight": "Incluye cafe de especialidad",
+      "tag": "",
+      "expires_at": "2025-11-15T17:00:00Z",
+      "category": "curated",
+      "business": 1,
+      "is_active": true,
+      "position": 1,
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "offers.offer",
+    "pk": 8,
+    "fields": {
+      "title": "Postres dos por uno",
+      "description": "Pasteles, cheesecakes y helados artesanales.",
+      "image_url": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=80",
+      "savings_label": "2x1",
+      "highlight": "Disponible de cuatro a siete",
+      "tag": "",
+      "expires_at": "2025-11-30T00:00:00Z",
+      "category": "curated",
+      "business": 3,
+      "is_active": true,
+      "position": 2,
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "offers.offer",
+    "pk": 9,
+    "fields": {
+      "title": "Delivery nocturno",
+      "description": "Pedidos despues de las diez con envio gratis.",
+      "image_url": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=700&q=80",
+      "savings_label": "Envio gratis",
+      "highlight": "Solo en la app",
+      "tag": "",
+      "expires_at": "2025-10-31T23:59:59Z",
+      "category": "curated",
+      "business": 2,
+      "is_active": true,
+      "position": 3,
+      "created_at": "2025-01-01T00:00:00Z",
+      "updated_at": "2025-01-01T00:00:00Z"
+    }
+  }
+]
