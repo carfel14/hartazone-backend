@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-8x=0ucvg_kyr#2wj%$!s=ex#_t2ub4o5@=^g&+!bn2l$*oefnh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS: list[str] = ['10.0.2.2', '127.0.0.1']
+ALLOWED_HOSTS: list[str] = ['10.0.2.2', '127.0.0.1', 'hartazone.onrender.com']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
