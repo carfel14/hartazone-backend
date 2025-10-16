@@ -1,4 +1,4 @@
-databases:
+﻿databases:
   - name: hartazone-database
     plan: free
     databaseName: hartazonedb
@@ -10,7 +10,7 @@ services:
     name: hartazone
     runtime: python
     buildCommand: './build.sh'
-    startCommand: 'python -m gunicorn hartazone.asgi:application -k uvicorn.workers.UvicornWorker'
+    startCommand: 'python manage.py loaddata fixtures/mock_restaurants.json fixtures/mock_offers.json && python manage.py ensure_admin_user && python -m gunicorn hartazone.asgi:application -k uvicorn.workers.UvicornWorker'
     envVars:
       - key: DATABASE_URL
         fromDatabase:

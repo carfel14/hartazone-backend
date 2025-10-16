@@ -10,3 +10,6 @@ python manage.py collectstatic --no-input
 
 # Apply any outstanding database migrations
 python manage.py migrate
+
+# Seed baseline data so new environments have restaurants/offers
+python manage.py loaddata fixtures/mock_restaurants.json fixtures/mock_offers.json
