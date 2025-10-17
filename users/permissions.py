@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 from typing import Iterable, Sequence
 
@@ -18,6 +18,8 @@ class RolePermission(BasePermission):
         self.allowed_roles = frozenset(allowed_roles)
 
     def has_permission(self, request, view) -> bool:
+        if request.method == 'OPTIONS':
+            return True
         user = request.user
         if not user or not user.is_authenticated:
             return False
