@@ -128,6 +128,36 @@ class RestaurantSerializer(serializers.ModelSerializer):
         return MysteryBoxSerializer(mystery).data
 
 
+class RestaurantCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Business
+        fields = (
+            "id",
+            "name",
+            "tagline",
+            "description",
+            "address",
+            "category",
+            "latitude",
+            "longitude",
+            "image_url",
+            "hero_image_url",
+            "delivery_available",
+            "delivery_time_minutes_min",
+            "delivery_time_minutes_max",
+        )
+        read_only_fields = ("id",)
+
+    def validate(self, attrs: dict[str, Any]) -> dict[str, Any]:
+        min_eta = attrs.get("delivery_time_minutes_min")
+        max_eta = attrs.get("delivery_time_minutes_max")
+        if min_eta and max_eta and min_eta > max_eta:
+            raise serializers.ValidationError(
+                {"delivery_time_minutes_max": "Maximum delivery time must be greater than or equal to minimum delivery time."}
+            )
+        return attrs
+
+
 class HomeRestaurantCardSerializer(serializers.ModelSerializer):
     id = serializers.CharField(source="pk", read_only=True)
     image = serializers.SerializerMethodField()

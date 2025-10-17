@@ -1,21 +1,23 @@
 from __future__ import annotations
 
 from django.db.models import Prefetch
-from rest_framework import permissions, viewsets
+from rest_framework import mixins, permissions, viewsets
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.reverse import reverse
 from rest_framework.response import Response
 
 from menu.models import FoodItem, MenuSection, MysteryBox
+from users.permissions import RolePermission
 from .models import Business
 from .serializers import (
     HomeDiscoverySerializer,
+    RestaurantCreateSerializer,
     RestaurantListSerializer,
     RestaurantSerializer,
 )
 
 
-class RestaurantViewSet(viewsets.ReadOnlyModelViewSet):
+class RestaurantViewSet(mixins.CreateModelMixin, viewsets.ReadOnlyModelViewSet):
     """
     Read-only entry point for restaurant catalogue data including menu sections and extras.
     """
@@ -63,7 +65,14 @@ class RestaurantViewSet(viewsets.ReadOnlyModelViewSet):
     def get_serializer_class(self):
         if self.action == "list":
             return RestaurantListSerializer
+        if self.action == "create":
+            return RestaurantCreateSerializer
         return RestaurantSerializer
+
+    def get_permissions(self):
+        if self.action == "create":
+            return [RolePermission.for_roles(["admin"])]
+        return [permissions.AllowAny()]
 
 
 class HomeDiscoveryViewSet(viewsets.ViewSet):
