@@ -55,3 +55,76 @@ class RestaurantCreateTests(APITestCase):
 
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
         self.assertEqual(Business.objects.count(), 0)
+
+    def test_admin_can_update_restaurant(self):
+        admin = self.User.objects.create_user(
+            email="admin2@example.com",
+            password="pass1234",
+            role=self.User.Roles.ADMIN,
+        )
+        business = Business.objects.create(
+            name="Original Name",
+            category=self.category,
+            delivery_available=False,
+        )
+        detail_url = reverse("restaurant-detail", args=[business.pk])
+        self.client.force_authenticate(user=admin)
+
+        payload = {
+            "name": "Updated Name",
+            "category": self.category.pk,
+            "delivery_available": True,
+        }
+
+        response = self.client.patch(detail_url, payload, format="json")
+
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        business.refresh_from_db()
+        self.assertEqual(business.name, payload["name"])
+        self.assertTrue(business.delivery_available)
+
+    def test_non_admin_cannot_update_restaurant(self):
+        user = self.User.objects.create_user(
+            email="user2@example.com",
+            password="pass1234",
+            role=self.User.Roles.USER,
+        )
+        business = Business.objects.create(name="Locked Restaurant", category=self.category)
+        detail_url = reverse("restaurant-detail", args=[business.pk])
+        self.client.force_authenticate(user=user)
+
+        response = self.client.patch(detail_url, {"name": "Should Fail"}, format="json")
+
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+        business.refresh_from_db()
+        self.assertEqual(business.name, "Locked Restaurant")
+
+    def test_admin_can_delete_restaurant(self):
+        admin = self.User.objects.create_user(
+            email="admin3@example.com",
+            password="pass1234",
+            role=self.User.Roles.ADMIN,
+        )
+        business = Business.objects.create(name="Delete Me", category=self.category)
+        detail_url = reverse("restaurant-detail", args=[business.pk])
+        self.client.force_authenticate(user=admin)
+
+        response = self.client.delete(detail_url)
+
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+        self.assertFalse(Business.objects.filter(pk=business.pk).exists())
+
+    def test_non_admin_cannot_delete_restaurant(self):
+        user = self.User.objects.create_user(
+            email="user3@example.com",
+            password="pass1234",
+            role=self.User.Roles.USER,
+        )
+        business = Business.objects.create(name="Still Here", category=self.category)
+        detail_url = reverse("restaurant-detail", args=[business.pk])
+        self.client.force_authenticate(user=user)
+
+        response = self.client.delete(detail_url)
+
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
+        self.assertTrue(Business.objects.filter(pk=business.pk).exists())

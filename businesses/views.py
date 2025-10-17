@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from django.db.models import Prefetch
-from rest_framework import mixins, permissions, viewsets
+from rest_framework import permissions, viewsets
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.reverse import reverse
 from rest_framework.response import Response
@@ -17,9 +17,12 @@ from .serializers import (
 )
 
 
-class RestaurantViewSet(mixins.CreateModelMixin, viewsets.ReadOnlyModelViewSet):
+class RestaurantViewSet(viewsets.ModelViewSet):
     """
-    Read-only entry point for restaurant catalogue data including menu sections and extras.
+    Restaurant catalogue endpoint.
+
+    - GET endpoints are publicly accessible.
+    - Mutation endpoints (POST/PATCH/PUT/DELETE) require an admin user.
     """
 
     permission_classes = [permissions.AllowAny]
@@ -65,14 +68,14 @@ class RestaurantViewSet(mixins.CreateModelMixin, viewsets.ReadOnlyModelViewSet):
     def get_serializer_class(self):
         if self.action == "list":
             return RestaurantListSerializer
-        if self.action == "create":
+        if self.action in {"create", "update", "partial_update"}:
             return RestaurantCreateSerializer
         return RestaurantSerializer
 
     def get_permissions(self):
-        if self.action == "create":
-            return [RolePermission.for_roles(["admin"])]
-        return [permissions.AllowAny()]
+        if self.request.method in permissions.SAFE_METHODS:
+            return [permissions.AllowAny()]
+        return [RolePermission.for_roles(["admin"])]
 
 
 class HomeDiscoveryViewSet(viewsets.ViewSet):
